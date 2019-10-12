@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shotcut icon" href="https://lh3.googleusercontent.com/P9tkZmeBy7610mTGa208DiE_2znsiEtlNc4MOEH0l0tHorHcNpXHSdiHb3veZRrpeSym=s180-rw">
+    <title>Adote Pets - Adoção e Doação de Pets</title>
+    <meta name="description" content="Agência especializada em Adoção e Doação de Pets">
+      <meta name="keywords" content="Agência de Adoção e Doação de Pets">
+      <meta name="author" content="Damião">
+      <link rel="stylesheet" href="css/estilo.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+      
+  <script type="text/javascript" src="js/TrocaDePagina.js"></script>
+  <script type="text/javascript" src="js/CadastrarUsuario.js"></script>
+  <script type="text/javascript" src="js/CadastrarPets.js"></script>
+  <script type="text/javascript" src="js/Banco.js"></script>
+  <script type="text/javascript" src="js/menu.js"></script>
+  <script type="text/javascript" src="js/MostrarPets.js"></script>
+
+    </head>
+<body>
+
+    <!-- LOGIN -->
+    <main class="servicos " style="display:inline;" id="login">
+        <article class="servico">
+            <a href="#"><img src="img/cat_lying_striped_sunlight_110223_1280x720.jpg" alt="Pets para Adoção Gato"></a>
+            <div class="inner, newsletter">
+                
+                <h2>Login</h2>
+                <h3>Faça login para começar!</h3>
+                            <form >
+                                
+                                <input type="txt" name="cpf" id="login_Cpf" placeholder="Seu CPF">
+                                <input type="password" name="senha" id="login_Senha" placeholder="Sua senha">
+                                <div id="button_cadastro">
+                                        <a onclick="cadastrar()" >Não tenho usuário </a>
+                                    </div>
+                                <button onclick="login()">Entrar</button>
+                            </form>
+            </div>
+        </article>
+            </main>
+                
+                   
+    
+    <!-- CADASTRO -->
+
+    <main class="servicos " style="display:none;" id="AbreCadastro">
+        <article class="servico">
+            <a href="#"><img src="img/cat_muzzle_thick_fluffy_85811_1280x720.jpg" alt="Pets para Adoção Gato"></a>
+            <div class="inner, newsletter">
+                
+            
+                <h2>Inscreva-se agora!</h2>
+                <h3>Receba novidades de pets, dicas e muito mais</h3>
+                <form >
+                    <input type="txt" id="Nome" name="nome" placeholder="Seu Nome">
+                    <input type="txt" id="Cpf" name="cpf" placeholder="Seu CPF">
+                    <input type="tel" id="Telefone" name="tel" placeholder="Seu nº Telefone">
+                    <input type="email" id="Email" name="email" placeholder="Seu email">
+                    <input type="password" id="Senha" name="psw" placeholder="Sua senha">
+                    <input type="password" id="ConfirmaSenha" name="psw " placeholder="Confirme a senha">
+                    <button onclick="CadastrarUsuario()">Cadastrar</button>
+                </form>
+            </div>
+        </article>
+            </main>
+
+           
+    
+   
+   
+
+  
+</body>
+</html>

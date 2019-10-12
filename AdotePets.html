@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shotcut icon" href="https://lh3.googleusercontent.com/P9tkZmeBy7610mTGa208DiE_2znsiEtlNc4MOEH0l0tHorHcNpXHSdiHb3veZRrpeSym=s180-rw">
+    <title>Adote Pets - Adoção e Doação de Pets</title>
+    <meta name="description" content="Agência especializada em Adoção e Doação de Pets">
+      <meta name="keywords" content="Agência de Adoção e Doação de Pets">
+      <meta name="author" content="Damião">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+      
+  <script type="text/javascript" src="js/TrocaDePagina.js"></script>
+  <script type="text/javascript" src="js/CadastrarUsuario.js"></script>
+  <script type="text/javascript" src="js/CadastrarPets.js"></script>
+  <script type="text/javascript" src="js/Banco.js"></script>
+  <script type="text/javascript" src="js/menu.js"></script>
+  <script type="text/javascript" src="js/MostrarPets.js"></script>
+  <script type="text/javascript" src='js/card_animal.js'></script>
+
+    </head>
+<body  onload="mostrarpets(), cards_animais()">
+    <!-- HEADER -->
+    <header class="cabecalho">
+       <a onclick="home()"> <h1 class="logo">Adote Pets - Adoção e Doação de Pets</h1></a>
+       <button class="bt-menu" onclick="abrirMenu()"> <i class="fa fa-bars fa-lg"></i></button>
+       <nav class="menu">
+           <a class="btn-close" onclick="fecharMenu()"><i class="fa fa-times"></i></a>
+           <ul>
+               <li><a onclick="home()">Home</a></li>
+               <li><a onclick="adicionarpets()">Adicionar Pet</a></li>
+               <li><a onclick="meuspets()">Meus Pets</a></li>
+               <li><a onclick="ongs()">Ongs</a></li>
+               <li><a onclick="sobre()">Sobre</a></li>
+               <li><a onclick="dica()">Dicas</a></li>
+                <li><a href="LoginCadastro.html">Logout</a></li> 
+               
+           </ul>
+       </nav>
+    </header>
+    <!-- BANNER -->
+    <div class="banner " style="display:inline;" id="banner">
+        <div class="title">
+            <h2>ADOTE SEU PET!</h2>
+            <h3>O Adote Pets é um aplicativo mobile que tem como objetivo ajudar os animais a 
+                conseguir um novo lar.</h3>
+        </div>
+         <div class="buttons">
+             <button class="btn-cadastrar" onclick="cadastrar()" id="btn-cadastro" style="display:none">Cadastrar-se <i class="fa fa-arrow-circle-right"></i></button>
+             <button class="btn-sobre" onclick="sobre()">Sobre<i class="fa fa-question-circle"></i></button>
+         </div>
+    </div>
+    <!-- MAIN -->
+    <main class="servicos " style="display:inline;" id="main">
+            <article class="servico">
+                    <a href="#"><img src="img/cat_lying_cool_cat_beautiful_cat_93539_1280x720.jpg" alt="Pets para Adoção Gato"></a>
+                    <div class="inner">
+                        <a href="#">Tina</a>
+                        <h4>Oi, sou a Tina</h4>
+                        <p>Essa gatinha linda é a Tina. Infelizmente os tutores dela faleceram e agora ela precisa de um
+                            novo lar. A Tina é carinhosa e companheira, já está castrada,
+                             vacinada e vermifugada. Ela está em Dourados, mas pode ser levada para Fatima do Sul e outras cidades próximas. 
+                             Alguém tem espaço na sua casa e na sua vida para acolher essa panterinha fofa? Se sim, pedimos que
+                             escreva para gente: adocaomopi@gmail.com.
+        
+                        </p>
+                    </div>
+                </article>
+                <article class="servico">
+                        <a href="#"><img src="img/dog_muzzle_eyes_117581_1280x720.jpg" alt="Pets para Adoção Cachorro"></a>
+                        <div class="inner">
+                            <a href="#">Billy</a>
+                            <h4>Oi, sou a Billy</h4>
+                            <p>Billy tem 6 anos, porte médio, pesa 14kg. Está castrado, vacinado e vermifugado, é muito bonzinho,
+                                amoroso, feliz, dócil e carente e adora brincar com outros amigos caninos e ficar perto das pessoas, um querido!
+                                Contatos Dourados. queroadotar@abeac.org.br. 
+            
+                            </p>
+                        </div>
+                    </article>
+                    <article class="servico">
+                            <a href="#"><img src="img/dog_muzzle_eyes_108789_1280x720.jpg" alt="Pets para Adoção Cadela"></a>
+                            <div class="inner">
+                                <a href="#">Danna</a>
+                                <h4>Oi, sou a Danna</h4>
+                                <p>Danna tem 6 anos, é de porte grande, pesa 22 quilos. Muito, mas muito dócil, carinhosa, tranquila, educada,
+                                    convive bem com cães machos e pessoas, é uma querida!
+                                    Contatos Dourados. queroadotar@abeac.org.br.      
+                                </p>
+                            </div>
+                        </article>
+      
+                </main>
+                <!-- ADICIONAR PETS -->
+                <main class="servicos " style="display:none;" id="main5">
+                        <article class="servico">
+                            <a onclick="AdicionarPets()"><img src="img/cat_snow_eyes_fluffy_95615_1280x720.jpg" alt="Adicionar Pets"></a>
+                            <div class="inner">
+                                <a onclick="AdicionarPets()" id="add_pets">Adicionar Pets</a>
+                                <h4>Adicione seus Pets</h4>
+                                <p>Todos os pets adicionados poderam ser vistos na tela Meus Pets, disponivel no menu.</p>
+                                
+                            </div>
+                        </article>
+                        </main>
+
+                        <!-- CADASTRAR PETS -->
+                        <main class="servicos " style="display:none;" id="cadastrarPets" >
+                            <section class="newsletter">
+                                    <h2>Adicionar Pets</h2>
+                                    <h3>Cadastre seu pet</h3>
+                                    <p>Preeencha todos os campos abaixo corretamente!</p>
+                           
+                           <form >
+                               <input type="txt" id="Cpf_Pets" name="cpf" placeholder="Seu CPF">
+                               <input type="number" id="Telefone_Pets" name="telefone" placeholder="Seu nº Telefone">
+                               <input type="email" id="Email_Pets" name="email" placeholder="Email de Contato">
+                               <input type="txt" id="Nome_Animal" name="name" placeholder="Nome do Animal">
+                              
+                               <form>
+                                <p>Responda o Questionario abaixo!</p>
+
+                                    <select name="txt" id="OpcaoAnimal">
+                                        <option value="" disabled selected>Animal</option>
+                                        <option value="gato">Gato</option>
+                                        <option value="cachorro">Cachorro</option>
+                                    </select>          
+
+                                    <select name="txt" id="OpcaoSexo">
+                                        <option value="" disabled selected>Sexo</option>
+                                        <option value="femea">Femea</option>
+                                        <option value="macho">Macho</option>
+                                    </select>
+                                    <p>Responda o Questionario abaixo com 'Sim' ou 'Não'!</p>                 
+                                   <select name="txt" id="OpcaoVacinado">
+                                       <option value="" disabled selected>O animal é Vacinada(o)?</option>
+                                       <option value=" está vacinada(o)">Sim</option>
+                                       <option value="não está vacinada(o)">Não</option>
+                                   </select>
+
+                                   <select name="txt" id="OpcaoCastrado">
+                                        <option value="" disabled selected>O animal é Castrado?</option>
+                                        <option value=" está castrada(o)">Sim</option>
+                                        <option value="não está castrada(o)">Não</option>
+                                    </select>
+
+                                    <select name="txt" id="OpcaoVermifugada">
+                                            <option value="" disabled selected>O animal é Vermifugada(o)?</option>
+                                            <option value=" está vermifugada(o)">Sim</option>
+                                            <option value="não está vermifugada(o)">Não</option>
+                                    </select>
+                                    <p>Localição</p>
+                                    <select name="" id="Cidade" >
+                                            <option  value="" disabled selected>Cidade</option>
+                                            <option value="Caarapó">Caarapó</option>
+                                            <option value="Douradina">Douradina</option>
+                                            <option value="Dourados">Dourados</option>
+                                            <option value="Fatima do sul">Fátima do Sul</option>
+                                            <option value="Itapora">Itaporá</option>
+                                            <option value="Vicentina">Vicentina</option>
+                                          </select>
+                               </form>
+                               
+                                        
+                               <button id="btnAdd" onclick="CadastrarPets()">Cadastrar</button>
+                           </form>
+                           
+                           
+                                
+                           </section>
+                           </main>
+
+                <!-- MEUS PETS -->
+                <main class="servicos " style="display:none;" id="main4">
+                        <article class="servico">
+                            <a href="#"><img src="img/cat_tabby_eyes_surprise_lie_94958_1280x720.jpg" alt="Sobre Adote Pets"></a>
+                            <div class="inner">
+                                <a href="#">Meus Pets</a>
+                                <h4>Meus Pets</h4>
+                                <p> Caso a doação de seu bichinho tenha sido realizada com susseso, apague
+                                    o formulario clicando no botão 'Deletar'.
+                
+                                </p>
+                            </div>
+                        </article>
+    </main>
+                <!-- SOBRE -->
+                <main class="servicos " style="display:none;" id="main2">
+                        <article class="servico">
+                            <a href="#"><img src="img/kitten_cat_computer_keyboard_apple_mac_black_and_white_94218_1280x720.jpg" alt="Sobre Adote Pets"></a>
+                            <div class="inner">
+                                <a href="#">Sobre</a>
+                                <h4>Sobre a adote pets</h4>
+                                <p> A Adote Pets é um aplicativo mobile que tenta ajudar os animais abandonados a conseguir um novo lar.
+                                     Fazemos a conexão entre as ongs e Centro de Controle de Zoonoses com pessoas interessadas em adotar um
+                                     pet. Nos ajude nessa empreitada.
+                                      App Desenvolvido Por: Damião Mendes.
+                
+                                </p>
+                            </div>
+                        </article>
+    </main>
+    <!-- ONGS -->
+    <main class="servicos " style="display:none;" id="main3">
+            <article class="servico">
+                <a href="#"><img src="img/Anjos de rua.jpg" alt="Logo de Ong"></a>
+                <div class="inner">
+                    <a href="#">Anjos de Rua</a>
+                    <h4>Olá, somos a Ong Anjos de Rua</h4>
+                    <p>"Uma pequena ajuda é melhor que muita pena." Messenger: Anjos de Rua - Dourados MS.
+    
+                    </p>
+                </div>
+            </article>
+            <article class="servico">
+                    <a href="#"><img src="img/10470707_246318368900418_8330760511681063005_n.png" alt="Logo de Ong"></a>
+                    <div class="inner">
+                        <a href="#">Ajude os Animais de Dourados</a>
+                        <h4>Olá, somos a Ong Ajude os Animais de Dourados</h4>
+                        <p>Você sente? Ele também. ATENÇÃO: Não somos uma ONG e não possuímos um abrigo de animais.
+                            Somos protetores independentes.
+                            Contato: ajudeosanimaisdedourados@hotmail.com.
+        
+                        </p>
+                    </div>
+                </article>
+                <article class="servico">
+                        <a href="#"><img src="img/ong abrigo dos bichos.png" alt="Logo de Ong"></a>
+                        <div class="inner">
+                            <a href="#">Abrigo dos Bichos</a>
+                            <h4>Olá, somos a Ong Abrigo dos Bichos</h4>
+                            <p>O Abrigo dos Bichos é uma entidade de Proteção e Bem-Estar Animal, com sede em Campo Grande, MS.
+                               
+                                
+                                AJUDE DOANDO:
+                                
+                                Conta bancária da Sociedade de Proteção e Bem-Estar Animal ABRIGO DOS BICHOS - CNPJ 05.108.286/0001-47
+                                
+                                BANCO DO BRASIL
+                                Agência 5783-5
+                                Conta Corrente 41.599-5   
+                            </p>
+                        </div>
+                    </article>
+                    <article class="servico">
+                            <a href="#"><img src="img/ong imad.jpg" alt="Logo de Ong"></a>
+                            <div class="inner">
+                                <a href="#">IMAD</a>
+                                <h4>Olá, somos a Ong IMAD</h4>
+                                <p>Promovemos a pesquisa, o estudo, a estruturação e implementação de planos, programas e projetos nas áreas cultural, social e do desenvolvimento econômico.
+                                        imadinstituto@yahoo.com.br      
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="servico">
+                                <a href="#"><img src="img/14956480_571398329728509_5431203845972213088_n.png" alt="Logo de Ong"></a>
+                                <div class="inner">
+                                    <a href="#">Refúgio dos Bichos</a>
+                                    <h4>Olá, somos a Ong Refúgio dos Bichos</h4>
+                                    <p>A ONG Refúgio dos Bichos disponibiliza o serviço de boleto bancário para possíveis 
+                                        doações os interessados em adquirir essa comodidade e continuar nos ajudando entre 
+                                        em contato: m.me.ONGRefúgioDosBichos                                            
+                                       Divulgar os direitos dos animais, respeitá-los, criar ferramentas de proteção contra a sua extinção, 
+                                       contra abusos e maus tratos é dever dos homens. Ações que promovam estas iniciativas e integrem outras é 
+                                       estar cumprindo mais uma parte de seu dever quanto cidadão.   
+                                    </p>
+                                </div>
+                            </article>
+                    </main>
+
+                    <!-- DICAS -->
+                <main class="servicos " style="display:none;" id="main6">
+                    <article class="servico">
+                        <a href="#"><img src="img/cat_black_snow_winter_113310_1280x720.jpg" alt="Sobre Adote Pets"></a>
+                        <div class="inner">
+                            <a href="#">Dicas</a>
+                            <h4>Adoção de Animais Silvestres</h4>
+                            <p> Segundo o IBAMA (Instituto Nacional do Meio Ambiente e dos Recursos Renováveis), 
+                                todo animal silvestre nativo resgatado que não tenha condições de voltar para a natureza 
+                                pode ser adotado como animal de estimação, se sua espécie estiver autorizada pelo órgão. 
+                                Esses animais podem ser aves, tartarugas, jabutis, papagaios e macacos...
+                            
+                            </p>
+                            <p>Se você tem vontade de adotar um animal silvestre, o pedido deve ser feito junto ao IBAMA, onde 
+                                é possível realizar o cadastro e com isso o processo acontece de forma legal.</p>
+
+                            <p>Mais Informações em: http://adotapets.com/dicas-de-adocao/eu-posso-adotar-um-animal-silvestre</p>
+
+                        </div>
+                    </article>
+</main>
+   
+    
+    
+    <!-- NEWSLETTER --> 
+    <section class="newsletter " style="display:inline;" id="newsletter" >
+        <h2>Inscreva-se agora!</h2>
+        <h3>Receba novidades de pets, dicas e muito mais</h3>
+        <form >
+            <input type="email" name="email" placeholder="Seu email">
+            <button onclick="cadastrar()">Cadastrar</button>
+        </form>
+
+    </section>
+    <!-- RODAPÉ --> 
+    <footer class="rodape">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+        </div>
+        <p class="copyright">
+            Copyright  © AdotePets 2018. Todos os direitos reservados.
+        </p>
+    </footer>
+
+ <!-- JQUERY --> 
+ <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+ <script>
+ $(".bt-menu").click(function(){
+   $(".menu").show();
+ });
+ $(".btn-close").click(function(){
+   $(".menu").hide();
+ });
+ </script>  
+
+</body>
+</html>

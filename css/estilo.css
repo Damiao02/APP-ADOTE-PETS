@@ -1,0 +1,207 @@
+
+/* -- Resetando html --*/
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    border: none;
+    outline: none;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+
+}
+body, html{
+    background-color: #e9e9ed;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+ul{
+    list-style-type: none;
+
+}
+img{
+    max-width: 100%;
+}
+
+/* ABERTURA*/
+.abertura{
+	align-items:center;
+	display:flex;
+	justify-content:center;
+	height:100vh;
+	background:#e9e9ed;
+}
+.abertura img{
+	max-width:20rem;
+}
+/* SERVIÇOS */
+.servicos{
+    width: 100%;
+    float: left;
+    text-align: center;
+    position: absolute;
+  top: 5%; /* posiciona na metade da tela */
+  margin-left: 15%; /* e retrocede metade da esquerda */
+    padding: 3% 4%;
+    
+}
+.servico{
+    width: 100%;
+    background-color: #fff;
+    text-align: left;
+    border-radius: 7px;
+    margin-bottom: 3%;
+
+}
+.servico img{
+    border-radius: 7px 7px 0 0;
+    background: url("../img/cat_lying_striped_sunlight_110223_1280x720.jpg")no-repeat fixed;
+}
+.inner{
+    padding: 7%;
+    color: #130400;
+}
+
+/* NEwSLETTER */
+.newsletter{
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding:3% 4%;
+    background-color: #fff;
+    color: #fff; 
+}
+.newsletter h2{
+    font-size: 1.5em;
+    color: #130400;
+    font-weight: 700;
+
+}
+.newsletter h3{
+    color: #130400;
+}
+.newsletter form{
+    margin-top: 2%;
+    
+    
+}
+.newsletter input{
+    width: 100%;
+    background-color: #fff;
+    color: #130400;
+    border: 1px solid rgba(155, 154, 154, 0.918);
+    padding: 5%;
+    border-radius: 5px;
+    margin: 2%;
+
+}
+
+.newsletter button{
+    width: 100%;
+    background-color: #130400;
+    color: #fff;
+    padding: 5%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+/* botão não tenho usuario */
+#button_cadastro a{
+    font-family: 'Lato', sans-serif;
+	color: #ce2e3c;
+	margin: 20px;
+	
+}
+
+/* MOBILE FIRST */
+/* SMALL DEVICES - SMARTPHONES */
+
+@media screen and (min-width: 480px){
+    .servico{
+        width:70%;
+        float: left;
+        margin:0px auto;
+    }
+    .servicos{
+        margin-left: 15%;
+    }
+
+}
+/* SMALL DEVICES - TABLETS */
+
+@media screen and (min-width: 768px){
+
+    .servico{
+        width: 55%; 
+        margin: 0px auto;
+        float: left;
+        
+    }
+    .servicos{
+        margin-left: 22%;
+    }
+    .newsletter input{
+        width: 90%;
+        padding:4%;
+        float: left; 
+        margin-right: 1%;
+    }
+    .newsletter button{
+        width: 90%;
+        padding: 4%;
+        
+        margin-top: 1.1rem;
+    }
+}
+
+/* SMALL DEVICES - TABLETS & DESKTOPS */
+
+@media screen and (min-width: 960px){
+
+    .servico{
+      width: 40%; 
+   }
+   .servicos{
+    margin-left: 29%;
+}
+.newsletter input{
+    width: 95%;
+    float: left;
+}
+.newsletter button{
+    width: 95%;
+    float: right;
+}
+}
+/* LARGE DEVICES - WIDE SCREENS */
+
+@media screen and (min-width: 1280px){
+
+    
+    .newsletter input{
+        width: 95%;
+        padding:4%;
+        float: left; 
+        margin-right: 1%;
+    }
+    .newsletter button{
+        width: 95%;
+        padding: 4%;
+       float: left;
+        margin-top: 1.1rem;
+    }
+
+    
+
+    
+ }
+
+ /* FORMULARIOS */
+ .invisivel{
+	display: none;
+}
+ 
